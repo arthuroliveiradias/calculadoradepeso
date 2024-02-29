@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>messi</title>
+</head>
+<body>
+
+<h1> imc - indice de massa corporal</h1>
+
+<label for="altura">altura</label> <br>
+<input type="number" name="" id="altura"></label> <br>
+
+<label for="peso">peso (kg)</label> <br>
+<input type="number" name="" id="peso"> <br>
+
+<button onclick="calcularImc()">calcular</button>
+
+<p>seu indice de massa corporal é: <span id="resultado"></span> </p>
+
+<script>
+    function calcularImc () {
+        const altura = document.getElementById('altura').value;
+        const peso = document.getElementById('peso').value;
+        const imc = peso / (altura ** 2);
+        
+        document.getElementById('resultado').textContent = imc.toFixed(2);
+    }
+</script>
+
+
+
+
+</body>
+</html>
